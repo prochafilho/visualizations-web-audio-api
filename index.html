@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>d3 | visualise audio</title>
+    <style>
+        body {
+            font-family: monospace;
+            line-height: 1.5;
+            background-color: #130C0E;
+            padding: 20px;
+        }
+
+        button {
+            font-size: 14px;
+            background: #130C0E;
+            color: #7AC143;
+            border: none;
+            outline: none;
+            padding: 4px 8px;
+            letter-spacing: 1px;
+        }
+
+        button:hover {
+            background: #7AC143;
+            color: #130C0E;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="audioElement" src="shakuhachi.mp3"></audio>
+    <div>
+        <button onclick="document.getElementById('audioElement').play()">Play &#9658;</button>
+        <button onclick="document.getElementById('audioElement').pause()">Pause ||</button>
+        <button onclick="document.getElementById('audioElement').volume+=0.1">Vol +</button>
+        <button onclick="document.getElementById('audioElement').volume-=0.1">Vol -</button>
+    </div>
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://d3js.org/d3-array.v1.min.js"></script>
+    <script src="https://d3js.org/d3-collection.v1.min.js"></script>
+    <script src="https://d3js.org/d3-color.v1.min.js"></script>
+    <script src="https://d3js.org/d3-format.v1.min.js"></script>
+    <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+    <script src="https://d3js.org/d3-time.v1.min.js"></script>
+    <script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+    <script src="https://d3js.org/d3-scale.v2.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
